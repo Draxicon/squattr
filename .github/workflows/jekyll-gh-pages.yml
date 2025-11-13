@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: docs/squattrdocs
+        working-directory: docs/squattr_docs
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,7 +29,7 @@ jobs:
         with:
           ruby-version: '3.1'
           bundler-cache: true
-          working-directory: docs/squattrdocs
+          working-directory: docs/squattr_docs
           
       - name: Setup Pages
         id: pages
@@ -43,7 +43,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/squattrdocs/_site
+          path: docs/squattr_docs/_site
 
   deploy:
     environment:
