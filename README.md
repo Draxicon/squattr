@@ -1,4 +1,7 @@
 # SQUATTR
-# (Sam's Branch)
 
 ## Friends
+
+### **Goals of This Branch**
+- Establish UML Diagram
+- Decide on baseline
