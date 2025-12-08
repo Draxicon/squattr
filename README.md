@@ -7,4 +7,4 @@
 - Decide on baseline
 
 ### **Initial UML Diagram**
-![Alt text] (/docs/PomoBaseline.png)
+![Alt text](/docs/PomoBaseline.png)
