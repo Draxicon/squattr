@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-#define light 2 // change this to LED_BUILTIN if you have the S2 (one of sam's)
+#define light 2 // the s3 verison has a rgb led try using builtin_led
 
 void setup()
 {
