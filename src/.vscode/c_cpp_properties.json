@@ -8,8 +8,8 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "c:/Users/draxi/Documents/repos/squattr/src/include",
-                "c:/Users/draxi/Documents/repos/squattr/src/src",
+                "C:/Users/draxi/Documents/repos/squattr/src/include",
+                "C:/Users/draxi/Documents/repos/squattr/src/src",
                 "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/newlib/platform_include",
                 "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include",
                 "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/esp_additions/freertos",
@@ -244,8 +244,8 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "c:/Users/draxi/Documents/repos/squattr/src/include",
-                    "c:/Users/draxi/Documents/repos/squattr/src/src",
+                    "C:/Users/draxi/Documents/repos/squattr/src/include",
+                    "C:/Users/draxi/Documents/repos/squattr/src/src",
                     "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/newlib/platform_include",
                     "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include",
                     "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/esp_additions/freertos",
