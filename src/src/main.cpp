@@ -1,16 +1,16 @@
 #include <Arduino.h>
+// #include "tft_test.h"// uncomment if testing tft screen
 
-#define light 2 // the s3 verison has a rgb led try using builtin_led
+
 
 void setup()
 {
-    pinMode(light, OUTPUT);
+//  basicdraw(); // uncomment if testing tft screen
+
+
 }
 
 void loop()
 {
-    digitalWrite(light, HIGH);
-    delay(7000);
-    digitalWrite(light, LOW);
-    delay(7000);
+
 }
