@@ -8,9 +8,9 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "c:/Users/draxi/Documents/repos/squattr/src/include",
-                "c:/Users/draxi/Documents/repos/squattr/src/src",
-                "c:/Users/draxi/Documents/repos/squattr/src/.pio/libdeps/esp32WROOM-tft/TFT_eSPI",
+                "C:/Users/draxi/Documents/repos/squattr/src/include",
+                "C:/Users/draxi/Documents/repos/squattr/src/src",
+                "C:/Users/draxi/Documents/repos/squattr/src/.pio/libdeps/esp32WROOM-tft/TFT_eSPI",
                 "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/libraries/LittleFS/src",
                 "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src",
                 "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/libraries/FS/src",
@@ -245,9 +245,9 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "c:/Users/draxi/Documents/repos/squattr/src/include",
-                    "c:/Users/draxi/Documents/repos/squattr/src/src",
-                    "c:/Users/draxi/Documents/repos/squattr/src/.pio/libdeps/esp32WROOM-tft/TFT_eSPI",
+                    "C:/Users/draxi/Documents/repos/squattr/src/include",
+                    "C:/Users/draxi/Documents/repos/squattr/src/src",
+                    "C:/Users/draxi/Documents/repos/squattr/src/.pio/libdeps/esp32WROOM-tft/TFT_eSPI",
                     "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/libraries/LittleFS/src",
                     "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src",
                     "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/libraries/FS/src",
