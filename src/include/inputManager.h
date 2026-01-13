@@ -8,6 +8,7 @@
 #define INPUT_MANAGER_H
 
 #include <Arduino.h>
+#include <config.h>
 
 /*
 * \brief used to help get current direction of the 
@@ -19,11 +20,15 @@ class RotaryEncoder
     public:
         enum class Direction
         {
-
-        }
-
+            NOROTATION = 0,
+            UP = 1,
+            DOWN = -1
+        };
+        
+        int RotaryEncoderSetup();
+        
     private:
-}
+};
 /*
 * \brief 
 *
@@ -35,7 +40,7 @@ class Button
 
     private:
 
-}
+};
 
 
 #endif
