@@ -18,7 +18,7 @@ void basicdraw()
   tft.setTextColor(TFT_WHITE);
   tft.setTextSize(1);
   tft.setTextFont(0); 
-  tft.print("Hello World!");
+  tft.print("Hello World (test)!");
 }
 
 #endif

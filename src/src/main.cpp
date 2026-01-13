@@ -1,15 +1,16 @@
 #include <Arduino.h>
 #include "config.h"
-// #include "tft_test.h"// uncomment if testing tft screen
+#include "tft_test.h"// uncomment if testing tft screen
 
 u_int8_t lastState = LOW;
 u_int8_t currentState;
 
 void setup()
 {
-//  basicdraw(); // uncomment if testing tft screen
+    basicdraw(); // uncomment if testing tft screen
     Serial.begin(9600);
     pinMode(LEFTBUTTON, INPUT_PULLUP);
+    Serial.println("Hello World");
 
 }
 
