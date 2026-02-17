@@ -8,11 +8,7 @@
 #define INPUT_MANAGER_H
 
 #include <Arduino.h>
-<<<<<<< HEAD
-#include <config.h>
-=======
 #include "config.h"
->>>>>>> aff260a9ab5a0f78ab96197cb4d15e7619fcf6a6
 
 /*
 * \brief used to help get current direction of the 
@@ -21,18 +17,6 @@
 class RotaryEncoder
 {
     public:
-<<<<<<< HEAD
-        enum class Direction
-        {
-            NOROTATION = 0,
-            UP = 1,
-            DOWN = -1
-        };
-        
-        int RotaryEncoderSetup();
-        
-    private:
-=======
         /*
         * \brief Constructor for rotary encoder library
         * \param void
@@ -61,7 +45,6 @@ class RotaryEncoder
     // holds digital read values for encoder
     volatile int8_t _pinA, _pinB;
 
->>>>>>> aff260a9ab5a0f78ab96197cb4d15e7619fcf6a6
 };
 /*
 * \brief 

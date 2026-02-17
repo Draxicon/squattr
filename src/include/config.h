@@ -1,13 +1,13 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 // left Button button pin
-#define LEFTBUTTON 12
+#define LEFTBUTTON 1
 // Right Button button pin
-#define RIGHTBUTTON 13
+#define RIGHTBUTTON 2
 
 // First pin for Rotary encoder, Clockwise Rotations
-#define RotaryEncoderPinA 10
+#define RotaryEncoderPinA 17
 // Second pin for Rotary encoder, Counter-Clockwise Rotations
-#define RotaryEncoderPinB 11
+#define RotaryEncoderPinB 18
 
 #endif
