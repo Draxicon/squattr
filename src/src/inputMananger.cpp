@@ -23,7 +23,6 @@ RotaryEncoder::RotaryEncoder()
     pinMode(RotaryEncoderPinA, INPUT_PULLUP);
     pinMode(RotaryEncoderPinB, INPUT_PULLUP);
 
-    RotaryEncoder::ISR_CheckAndUpdatePositon();
    
 }
 
@@ -40,6 +39,7 @@ void RotaryEncoder::ISR_CheckAndUpdatePositon()
         // calculate current direction by comparing prior state to current state
         // then covert to an index that can be used in above array
         Direction = RotaryLookupSheet[_currentDirection | (_OldDirection << 2)];
+        
    }
 
 }

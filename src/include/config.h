@@ -8,6 +8,6 @@
 // First pin for Rotary encoder, Clockwise Rotations
 #define RotaryEncoderPinA 17
 // Second pin for Rotary encoder, Counter-Clockwise Rotations
-#define RotaryEncoderPinB 18
+#define RotaryEncoderPinB 16
 
 #endif

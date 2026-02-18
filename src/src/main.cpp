@@ -13,16 +13,16 @@ void checkpos()
 }
 void setup()
 {
-    basicdraw(); // uncomment if testing tft screen
     Serial.begin(115200);
+    log_d("TEST");
     Serial.println("== Serial Start ==");
+    basicdraw(); // uncomment if testing tft screen
     encoder = new RotaryEncoder();
     Serial.println("== Encoder Class Created ==");
     attachInterrupt(digitalPinToInterrupt(RotaryEncoderPinA), checkpos, CHANGE);
     attachInterrupt(digitalPinToInterrupt(RotaryEncoderPinB), checkpos, CHANGE);
     Serial.println("== Interupts Attached ==");
     delay(1000);
-    basicdraw();
     Serial.println("== Setup Complete ==");
     
    
