@@ -502,6 +502,7 @@
                 "TFT_SCLK=12",
                 "TFT_CS=6",
                 "TFT_DC=10",
+                "TFT_BL=8",
                 "TFT_RST=7",
                 "LOAD_GLCD=1",
                 "SMOOTH_FONT=1",

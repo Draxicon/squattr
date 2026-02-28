@@ -31,6 +31,7 @@ void setup()
 void loop()
 {
     Serial.printf("pos: %d\n", encoder->Direction);
+    delay(50);
    
     
 }
