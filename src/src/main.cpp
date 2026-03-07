@@ -1,30 +1,55 @@
 #include <Arduino.h>
 #include "config.h"
-// #include "tft_test.h"// uncomment if testing tft screen
+#include "Button.h"
+//#include "rotaryEncoder.h"
+//#include "tft_test.h"// uncomment if testing tft screen
 
+
+/*
+RotaryEncoder *encoder;
 u_int8_t lastState = LOW;
 u_int8_t currentState;
+*/
 
+/*
+void checkpos()
+{
+    encoder->ISR_CheckAndUpdatePositon();
+}
+*/
+Button leftButton(LEFTBUTTON);
 void setup()
 {
-//  basicdraw(); // uncomment if testing tft screen
-    Serial.begin(9600);
-    pinMode(LEFTBUTTON, INPUT_PULLUP);
-
+    Serial.begin(115200);
+    //log_d("TEST");
+    //Serial.println("== Serial Start ==");
+    //basicdraw(); // uncomment if testing tft screen
+    //encoder = new RotaryEncoder();
+    //Serial.println("== Encoder Class Created ==");
+    //attachInterrupt(digitalPinToInterrupt(RotaryEncoderPinA), checkpos, CHANGE);
+    //attachInterrupt(digitalPinToInterrupt(RotaryEncoderPinB), checkpos, CHANGE);
+    //Serial.println("== Interupts Attached ==");
+    delay(1000);
+    Serial.println("== Setup Complete ==");
+    leftButton.begin();
+    
+   
 }
 
 void loop()
 {
-    currentState = digitalRead(LEFTBUTTON);
-
-    if(lastState == HIGH && currentState == LOW)
+    //Serial.printf("pos: %d\n", encoder->Direction);
+    //Button.isPressed();
+    //Serial.println("Button is pressed");
+    if(leftButton.isPressed())
     {
-        Serial.println("The button is pressed");
+        Serial.println("Button is pressed");
     }
-    else if (lastState == LOW && currentState == HIGH)
+    else
     {
-        Serial.println("The button is released");
+        Serial.println("Button is not pressed");
     }
-
-    lastState = currentState;
+    delay(50);
+   
+    
 }
