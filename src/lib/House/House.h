@@ -11,6 +11,8 @@ state manager library, houses the
 #include "config.h"
 #include "houseState.h"
 
+// to avoid circular dependency/include
+class houseState;
 
 /*
 * \brief acts as the skeleton that can transistion to other states basically the main "house"
@@ -40,6 +42,7 @@ class House
         */
         void setState(houseState& nextState);
     private:
+        // internal definition of where we currently are
         houseState* currentState;
 };
 
