@@ -6,9 +6,10 @@
 #define HOUSE_STATE_H
 #include <Arduino.h>
 #include "config.h"
-#include "stateManager.h"
+#include "House.h"
 
 class House;
+
 
 class houseState
 {
