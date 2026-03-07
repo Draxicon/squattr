@@ -9,7 +9,6 @@
             "name": "PlatformIO",
             "includePath": [
                 "C:/Users/draxi/Documents/repos/squattr/src/src",
-                "C:/Users/draxi/Documents/repos/squattr/src/lib/inputManager",
                 "C:/Users/draxi/Documents/repos/squattr/src/.pio/libdeps/esp32-s3-tft/TFT_eSPI",
                 "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/libraries/LittleFS/src",
                 "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src",
@@ -219,6 +218,7 @@
                 "C:/Users/draxi/Documents/repos/squattr/src/lib/activityManager",
                 "C:/Users/draxi/Documents/repos/squattr/src/lib/concreteStates",
                 "C:/Users/draxi/Documents/repos/squattr/src/lib/houseState",
+                "C:/Users/draxi/Documents/repos/squattr/src/lib/rotaryEncoder",
                 "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/libraries/ArduinoOTA/src",
                 "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/libraries/AsyncUDP/src",
                 "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/libraries/BLE/src",
@@ -254,7 +254,6 @@
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
                     "C:/Users/draxi/Documents/repos/squattr/src/src",
-                    "C:/Users/draxi/Documents/repos/squattr/src/lib/inputManager",
                     "C:/Users/draxi/Documents/repos/squattr/src/.pio/libdeps/esp32-s3-tft/TFT_eSPI",
                     "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/libraries/LittleFS/src",
                     "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src",
@@ -464,6 +463,7 @@
                     "C:/Users/draxi/Documents/repos/squattr/src/lib/activityManager",
                     "C:/Users/draxi/Documents/repos/squattr/src/lib/concreteStates",
                     "C:/Users/draxi/Documents/repos/squattr/src/lib/houseState",
+                    "C:/Users/draxi/Documents/repos/squattr/src/lib/rotaryEncoder",
                     "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/libraries/ArduinoOTA/src",
                     "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/libraries/AsyncUDP/src",
                     "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/libraries/BLE/src",
