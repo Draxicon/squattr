@@ -1,6 +1,4 @@
-/*
- house State library, handles base functions that all concrete states should have
-*/
+// house State library, handles base functions that all concrete states should have
 
 #ifndef HOUSE_STATE_H
 #define HOUSE_STATE_H

@@ -1,8 +1,9 @@
 #include <Arduino.h>
 #include "config.h"
-//#include "inputManager.h"
-//#include "tft_test.h"// uncomment if testing tft screen
 #include "Button.h"
+//#include "rotaryEncoder.h"
+//#include "tft_test.h"// uncomment if testing tft screen
+
 
 /*
 RotaryEncoder *encoder;

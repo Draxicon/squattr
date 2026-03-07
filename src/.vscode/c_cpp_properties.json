@@ -9,6 +9,7 @@
             "name": "PlatformIO",
             "includePath": [
                 "C:/Users/draxi/Documents/repos/squattr/src/src",
+                "C:/Users/draxi/Documents/repos/squattr/src/lib/Button",
                 "C:/Users/draxi/Documents/repos/squattr/src/.pio/libdeps/esp32-s3-tft/TFT_eSPI",
                 "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/libraries/LittleFS/src",
                 "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src",
@@ -254,6 +255,7 @@
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
                     "C:/Users/draxi/Documents/repos/squattr/src/src",
+                    "C:/Users/draxi/Documents/repos/squattr/src/lib/Button",
                     "C:/Users/draxi/Documents/repos/squattr/src/.pio/libdeps/esp32-s3-tft/TFT_eSPI",
                     "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/libraries/LittleFS/src",
                     "C:/Users/draxi/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src",
