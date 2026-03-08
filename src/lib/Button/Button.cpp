@@ -10,14 +10,14 @@ void Button::begin()
   pinMode(pin, INPUT_PULLUP);
 }
 
-void Button::debounce()
+void Button::debounce() 
 {
   bool current = digitalRead(pin);
-  if(current != previous)
+  if(current != previous) 
   {
     debounceTime = millis();
   }
-  if((millis() - debounceTime) > debounceDelay)
+  if((millis() - debounceTime) > debounceDelay) 
   {
     stable = current;
   }
@@ -25,14 +25,26 @@ void Button::debounce()
 }
 
 //These are for using the buttons
-bool Button::isPressed()
+bool Button::isPressed() 
 {
-  return stable == LOW;
+  if (stable == LOW && lastStable == HIGH) 
+  {
+    lastStable = stable;
+    return true;
+  }
+  lastStable = stable;
+  return false;
 }
 
-bool Button::isReleased()
+bool Button::isReleased() 
 {
-  return stable == HIGH;
+  if (stable == HIGH && lastStable == LOW) 
+  {
+    lastStable = stable;
+    return true;
+  }
+  lastStable = stable;
+  return false;
 }
 
 unsigned long Button::holdTime()

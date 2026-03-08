@@ -23,7 +23,7 @@ class livingRoom : public houseState
         * \param House* 
         * \return void
         */
-        void toggle(House* house);
+        void toggle(House* house,ButtonSelect Select);
 
         /*
         *  \brief handles what the current state should do as its leaving
@@ -38,6 +38,7 @@ class livingRoom : public houseState
         * \return static houseState&
         */
         static houseState& getInstance();
+        const char* getName() override { return "Living Room"; }
     private:
         // singleton principal, only one instance of this state can be active at anytime
         livingRoom() {}
@@ -62,7 +63,7 @@ class Bathroom : public houseState
         * \param House* 
         * \return void
         */
-        void toggle(House* house);
+        void toggle(House* house,ButtonSelect Select);
 
         /*
         *  \brief handles what the current state should do as its leaving
@@ -77,6 +78,8 @@ class Bathroom : public houseState
         * \return static houseState&
         */
         static houseState& getInstance();
+        const char* getName() override { return "Bathroom"; }
+
     private:
         // singleton principal, only one instance of this state can be active at anytime
         Bathroom() {}
@@ -100,7 +103,7 @@ class Settings : public houseState
         * \param House* 
         * \return void
         */
-        void toggle(House* house);
+        void toggle(House* house,ButtonSelect Select);
 
         /*
         *  \brief handles what the current state should do as its leaving
@@ -115,6 +118,7 @@ class Settings : public houseState
         * \return static houseState&
         */
         static houseState& getInstance();
+        const char* getName() override { return "Settings"; }
     private:
         // singleton principal, only one instance of this state can be active at anytime
         Settings() {}
@@ -140,7 +144,7 @@ class setTimer : public houseState
         * \param House* 
         * \return void
         */
-        void toggle(House* house);
+        void toggle(House* house,ButtonSelect Select);
 
         /*
         *  \brief handles what the current state should do as its leaving
@@ -155,6 +159,7 @@ class setTimer : public houseState
         * \return static houseState&
         */
         static houseState& getInstance();
+        const char* getName() override { return "Set Timer"; }
     private:
         // singleton principal, only one instance of this state can be active at anytime
         setTimer() {}
@@ -178,7 +183,7 @@ class studyTime : public houseState
         * \param House* 
         * \return void
         */
-        void toggle(House* house);
+        void toggle(House* house,ButtonSelect Select);
 
         /*
         *  \brief handles what the current state should do as its leaving
@@ -193,6 +198,7 @@ class studyTime : public houseState
         * \return static houseState&
         */
         static houseState& getInstance();
+        const char* getName() override { return "Study Time"; }
     private:
         // singleton principal, only one instance of this state can be active at anytime
         studyTime() {}
@@ -216,7 +222,7 @@ class breakTime : public houseState
         * \param House* 
         * \return void
         */
-        void toggle(House* house);
+        void toggle(House* house,ButtonSelect Select);
 
         /*
         *  \brief handles what the current state should do as its leaving
@@ -231,12 +237,14 @@ class breakTime : public houseState
         * \return static houseState&
         */
         static houseState& getInstance();
+        const char* getName() override { return "Break time"; }
     private:
         // singleton principal, only one instance of this state can be active at anytime
         breakTime() {}
         breakTime(const breakTime& other);
         breakTime& operator = (const breakTime& other);     
 };
+
 
 
 #endif

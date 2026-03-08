@@ -1,6 +1,9 @@
 #include <Arduino.h>
 #include "config.h"
 #include "Button.h"
+#include "concreteStates.h"
+#include "houseState.h"
+#include "House.h"
 //#include "rotaryEncoder.h"
 //#include "tft_test.h"// uncomment if testing tft screen
 
@@ -18,6 +21,9 @@ void checkpos()
 }
 */
 Button leftButton(LEFTBUTTON);
+Button middleButton(MIDDLEBUTTON);
+Button rightButton(RIGHTBUTTON);
+House myHouse;
 
 void setup()
 {
@@ -33,20 +39,33 @@ void setup()
     delay(1000);
     Serial.println("== Setup Complete ==");
     leftButton.begin();
+    middleButton.begin();
+    rightButton.begin();
     
    
 }
 
-void loop()
-{
-    //Serial.printf("pos: %d\n", encoder->Direction);
-    //Button.isPressed();
-    //Serial.println("Button is pressed");
+void loop() {
     leftButton.debounce();
-    if(leftButton.isPressed())
+    middleButton.debounce();
+    rightButton.debounce();
+
+    if(leftButton.isPressed()) 
     {
-        Serial.printf("Hold Time = %lu ms\n", leftButton.holdTime());
+        myHouse.Toggle(LBUTTON);
     }
 
-    delay(200);
+        // MIDDLE BUTTON
+    if (middleButton.isPressed()) 
+    {
+        myHouse.Toggle(MBUTTON);
+    }
+
+    // RIGHT BUTTON
+    if (rightButton.isPressed()) 
+    {
+        myHouse.Toggle(RBUTTON);
+    }
+
+    delay(10);
 }

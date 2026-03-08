@@ -13,7 +13,7 @@ void House::setState(houseState& nextState)
     currentState->enter(this); // new states entrance function
 }
 
-void House::Toggle()
+void House::Toggle(ButtonSelect Select)
 {
-    currentState->toggle(this);
+    currentState->toggle(this, Select);
 }

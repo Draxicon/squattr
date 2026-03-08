@@ -3,7 +3,8 @@
 // left Button button pin
 #define LEFTBUTTON 1
 // Right Button button pin
-#define RIGHTBUTTON 2
+#define MIDDLEBUTTON 2
+#define RIGHTBUTTON 21
 
 // First pin for Rotary encoder, Clockwise Rotations
 #define RotaryEncoderPinA 17
