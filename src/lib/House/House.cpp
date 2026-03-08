@@ -15,5 +15,5 @@ void House::setState(houseState& nextState)
 
 void House::Toggle()
 {
-    currentState->toggle(this);
+    currentState->toggle(this); 
 }

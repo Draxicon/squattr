@@ -23,7 +23,7 @@ class livingRoom : public houseState
         * \param House* 
         * \return void
         */
-        void toggle(House* house);
+        void toggle(House* house, int whichbuttonpressed);
 
         /*
         *  \brief handles what the current state should do as its leaving
@@ -62,7 +62,7 @@ class Bathroom : public houseState
         * \param House* 
         * \return void
         */
-        void toggle(House* house);
+        void toggle(House* house, int whichbuttonpressed);
 
         /*
         *  \brief handles what the current state should do as its leaving
@@ -100,7 +100,7 @@ class Settings : public houseState
         * \param House* 
         * \return void
         */
-        void toggle(House* house);
+        void toggle(House* house, int whichbuttonpressed);
 
         /*
         *  \brief handles what the current state should do as its leaving
@@ -140,7 +140,7 @@ class setTimer : public houseState
         * \param House* 
         * \return void
         */
-        void toggle(House* house);
+        void toggle(House* house, int whichbuttonpressed);
 
         /*
         *  \brief handles what the current state should do as its leaving
@@ -178,7 +178,7 @@ class studyTime : public houseState
         * \param House* 
         * \return void
         */
-        void toggle(House* house);
+        void toggle(House* house, int whichbuttonpressed);
 
         /*
         *  \brief handles what the current state should do as its leaving
@@ -216,7 +216,7 @@ class breakTime : public houseState
         * \param House* 
         * \return void
         */
-        void toggle(House* house);
+        void toggle(House* house, int whichbuttonpressed);
 
         /*
         *  \brief handles what the current state should do as its leaving

@@ -24,7 +24,7 @@ class houseState
         * \param House* 
         * \return void
         */
-        virtual void toggle(House* house) = 0;
+        virtual void toggle(House* house, int whichbuttonpressed) = 0;
          /*
         *  \brief handles what the current state should do as its leaving
         * \param House* 
