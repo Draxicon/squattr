@@ -28,7 +28,7 @@ class House
         * \param void
         *  \returns void
         */
-        void Toggle();
+        void Toggle(int whichbutton);
 
         /*
         * \brief Just lets us know what state were currently at

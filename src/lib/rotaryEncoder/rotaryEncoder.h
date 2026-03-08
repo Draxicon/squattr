@@ -43,18 +43,4 @@ class RotaryEncoder
     volatile int8_t _pinA, _pinB;
 
 };
-/*
-* \brief 
-*
-*
-*/
-class Button
-{
-    public:
-
-    private:
-
-};
-
-
 #endif

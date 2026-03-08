@@ -1,3 +1,4 @@
+#include<Arduino.h>
 #include "concreteStates.h"
 #include "House.h"
 
@@ -13,7 +14,8 @@ void House::setState(houseState& nextState)
     currentState->enter(this); // new states entrance function
 }
 
-void House::Toggle()
+void House::Toggle(int whichbutton)
 {
-    currentState->toggle(this); 
+    
+    currentState->toggle(this, whichbutton); 
 }

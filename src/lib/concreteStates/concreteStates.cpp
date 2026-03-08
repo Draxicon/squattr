@@ -12,6 +12,7 @@ void livingRoom::enter(House* house)
 
 void livingRoom::toggle(House* house, int whichbuttonpressed)
 {
+    /*
    switch (whichbuttonpressed)
    {
    case LEFTBUTTON:
@@ -27,6 +28,19 @@ void livingRoom::toggle(House* house, int whichbuttonpressed)
 
    default:
     break;
+   }
+    */
+   if(whichbuttonpressed == LEFTBUTTON)
+   {
+        house->setState(Bathroom::getInstance());
+   }
+   else if(whichbuttonpressed == MIDDLEBUTTON)
+   {
+        house->setState(Settings::getInstance());
+   }
+   else if(whichbuttonpressed == RIGHTBUTTON)
+   {
+        house->setState(setTimer::getInstance());
    }
 }
 
