@@ -1,9 +1,5 @@
-/*
+// state manager library, the dummy file that helps define state transistons
 
-state manager library, houses the 
-
-
-*/
 #ifndef HOUSE_H
 #define HOUSE_H
 
@@ -27,6 +23,11 @@ class House
         */
         House();
 
+         /*
+        * \brief calls the currentState's toggle function referencing itself to transition states
+        * \param void
+        *  \returns void
+        */
         void Toggle();
 
         /*

@@ -30,10 +30,16 @@ class livingRoom : public houseState
         * \param House* 
         * \return void
         */
-         void exit(House* house);
+        void exit(House* house);
 
+        /*
+        * \brief creates a singluar instance of the state and can return that specific state when called
+        * \param void
+        * \return static houseState&
+        */
         static houseState& getInstance();
     private:
+        // singleton principal, only one instance of this state can be active at anytime
         livingRoom() {}
         livingRoom(const livingRoom& other);
         livingRoom& operator = (const livingRoom& other);
@@ -63,10 +69,16 @@ class Bathroom : public houseState
         * \param House* 
         * \return void
         */
-         void exit(House* house);
+        void exit(House* house);
 
+        /*
+        * \brief creates a singluar instance of the state and can return that specific state when called
+        * \param void
+        * \return static houseState&
+        */
         static houseState& getInstance();
     private:
+        // singleton principal, only one instance of this state can be active at anytime
         Bathroom() {}
         Bathroom(const Bathroom& other);
         Bathroom& operator = (const Bathroom& other);   
@@ -95,10 +107,16 @@ class Settings : public houseState
         * \param House* 
         * \return void
         */
-         void exit(House* house);
+        void exit(House* house);
 
+        /*
+        * \brief creates a singluar instance of the state and can return that specific state when called
+        * \param void
+        * \return static houseState&
+        */
         static houseState& getInstance();
     private:
+        // singleton principal, only one instance of this state can be active at anytime
         Settings() {}
         Settings(const Settings& other);
         Settings& operator = (const Settings& other);
@@ -129,10 +147,16 @@ class setTimer : public houseState
         * \param House* 
         * \return void
         */
-         void exit(House* house);
+        void exit(House* house);
 
+        /*
+        * \brief creates a singluar instance of the state and can return that specific state when called
+        * \param void
+        * \return static houseState&
+        */
         static houseState& getInstance();
     private:
+        // singleton principal, only one instance of this state can be active at anytime
         setTimer() {}
         setTimer(const setTimer& other);
         setTimer& operator = (const setTimer& other);       
@@ -161,10 +185,16 @@ class studyTime : public houseState
         * \param House* 
         * \return void
         */
-         void exit(House* house);
+        void exit(House* house);
 
+        /*
+        * \brief creates a singluar instance of the state and can return that specific state when called
+        * \param void
+        * \return static houseState&
+        */
         static houseState& getInstance();
     private:
+        // singleton principal, only one instance of this state can be active at anytime
         studyTime() {}
         studyTime(const studyTime& other);
         studyTime& operator = (const studyTime& other);     
@@ -193,10 +223,16 @@ class breakTime : public houseState
         * \param House* 
         * \return void
         */
-         void exit(House* house);
+        void exit(House* house);
 
+        /*
+        * \brief creates a singluar instance of the state and can return that specific state when called
+        * \param void
+        * \return static houseState&
+        */
         static houseState& getInstance();
     private:
+        // singleton principal, only one instance of this state can be active at anytime
         breakTime() {}
         breakTime(const breakTime& other);
         breakTime& operator = (const breakTime& other);     

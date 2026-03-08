@@ -1,8 +1,5 @@
-/*
-* Input manager library, used to help define functionality of our inputs (rotary encoder, buttons, ect)
-* Drax: 12.24.2025 created class for rotary encoder
-*
-*/
+// rotaryEncoder library, used to help define functionality of our rotaryEncoder
+
 
 #ifndef INPUT_MANAGER_H
 #define INPUT_MANAGER_H

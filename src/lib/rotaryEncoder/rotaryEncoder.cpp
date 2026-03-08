@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "inputManager.h"
+#include "rotaryEncoder.h"
 #include "config.h"
 
 // basically a k-map of potential states
