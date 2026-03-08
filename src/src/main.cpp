@@ -17,6 +17,7 @@ void checkpos()
 }
 */
 Button leftButton(LEFTBUTTON);
+
 void setup()
 {
     Serial.begin(115200);
@@ -40,15 +41,11 @@ void loop()
     //Serial.printf("pos: %d\n", encoder->Direction);
     //Button.isPressed();
     //Serial.println("Button is pressed");
+    leftButton.debounce();
     if(leftButton.isPressed())
     {
-        Serial.println("Button is pressed");
+        Serial.printf("Hold Time = %lu ms\n", leftButton.holdTime());
     }
-    else
-    {
-        Serial.println("Button is not pressed");
-    }
-    delay(50);
-   
-    
+
+    delay(200);
 }

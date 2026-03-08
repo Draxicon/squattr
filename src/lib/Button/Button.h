@@ -7,11 +7,18 @@ class Button
 {
     private:
         int pin;
-
+        bool previous = HIGH;
+        bool stable = HIGH;
+        unsigned long debounceTime = 0;
+        const unsigned long debounceDelay = 25;
+        unsigned long startTime = 0;
     public:
         Button(int p);
         void begin();
         bool isPressed();
+        void debounce();
+        bool isReleased();
+        unsigned long holdTime();
 };
 
 #endif
