@@ -9,6 +9,12 @@
 // to avoid circular dependency/include
 class House;
 
+enum ButtonSelect
+{
+    LBUTTON,
+    MBUTTON,
+    RBUTTON
+};
 
 class houseState
 {
@@ -24,7 +30,7 @@ class houseState
         * \param House* 
         * \return void
         */
-        virtual void toggle(House* house, int whichbuttonpressed) = 0;
+        virtual void toggle(House* house,ButtonSelect Select) = 0;
          /*
         *  \brief handles what the current state should do as its leaving
         * \param House* 
@@ -33,6 +39,7 @@ class houseState
         virtual void exit(House* house) = 0;
 
         virtual ~houseState() {}
+        virtual const char* getName() = 0;
 
 };
 

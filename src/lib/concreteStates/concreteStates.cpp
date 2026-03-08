@@ -1,169 +1,164 @@
 #include "concreteStates.h"
-#include "House.h"
 #include "houseState.h"
-#include "config.h"
+#include "House.h"
 
-
-// ---- Living Room Class Functions ----
-void livingRoom::enter(House* house)
+//LIVING ROOM
+houseState& livingRoom::getInstance() 
 {
-    Serial.println("entered living room");
+    static livingRoom instance;
+    return instance;
+}
+void livingRoom::enter(House* house) 
+{
+    Serial.println("Entering Living Room");
+}
+void livingRoom::toggle(House* house,ButtonSelect Select) 
+{
+    switch(Select)
+    {
+        case LBUTTON:
+            house->setState(Bathroom::getInstance());
+            break;
+        case MBUTTON:
+            house->setState(Settings::getInstance());
+            break;
+        case RBUTTON:
+            house->setState(setTimer::getInstance());
+            break;
+    }
+}
+void livingRoom::exit(House* house) {
+    Serial.println("Exiting Living Room");
 }
 
-void livingRoom::toggle(House* house, int whichbuttonpressed)
-{
-    /*
-   switch (whichbuttonpressed)
-   {
-   case LEFTBUTTON:
-        house->setState(Bathroom::getInstance());
-    break;
-
-   case MIDDLEBUTTON:
-        house->setState(Settings::getInstance());
-    break;
-    case RIGHTBUTTON:
-        house->setState(setTimer::getInstance());
-    break;
-
-   default:
-    break;
-   }
-    */
-   if(whichbuttonpressed == LEFTBUTTON)
-   {
-        house->setState(Bathroom::getInstance());
-   }
-   else if(whichbuttonpressed == MIDDLEBUTTON)
-   {
-        house->setState(Settings::getInstance());
-   }
-   else if(whichbuttonpressed == RIGHTBUTTON)
-   {
-        house->setState(setTimer::getInstance());
-   }
+//BATHROOM
+houseState& Bathroom::getInstance() {
+    static Bathroom instance;
+    return instance;
 }
-
-void livingRoom::exit(House* house)
+void Bathroom::enter(House* house) 
 {
-    Serial.println("leaving living room");
+    Serial.println("Entering Bathroom");
 }
-
-houseState& livingRoom::getInstance()
+void Bathroom::toggle(House* house,ButtonSelect Select) 
 {
-    static livingRoom singleInstanceOfLivingRoom;
-    return singleInstanceOfLivingRoom;
+    switch(Select)
+    {
+        case LBUTTON:
+            house->setState(livingRoom::getInstance());
+            break;
+        case MBUTTON:
+            break;
+        case RBUTTON:
+            break;
+    }
 }
-
-// ---- Bathroom Class Functions ----
-void Bathroom::enter(House* house)
+void Bathroom::exit(House* house) 
 {
-   Serial.println("entered Bathroom"); 
+    Serial.println("Exiting Bathroom");
 }
-
-void Bathroom::toggle(House* house, int whichbuttonpressed)
+//SETTINGS
+houseState& Settings::getInstance() 
 {
-   switch (whichbuttonpressed)
-   {
-   case LEFTBUTTON:
-        // invalid input
-    break;
-
-   case MIDDLEBUTTON:
-        house->setState(livingRoom::getInstance());
-    break;
-    case RIGHTBUTTON:
-        // invalid input
-    break;
-
-   default:
-    break;
-   }
+    static Settings instance;
+    return instance;
 }
-
-void Bathroom::exit(House* house)
+void Settings::enter(House* house) 
 {
-    Serial.println("leaving bathroom");
+    Serial.println("Entering Settings"); 
 }
-
-houseState& Bathroom::getInstance()
+void Settings::toggle(House* house,ButtonSelect Select) 
+{ 
+    switch(Select)
+    {
+        case LBUTTON:
+            house->setState(livingRoom::getInstance());
+            break;
+        case MBUTTON:
+            break;
+        case RBUTTON:
+            break;
+    }
+}
+void Settings::exit(House* house) 
+{ 
+    Serial.println("Exiting Settings"); 
+}
+//SETTIMER
+houseState& setTimer::getInstance() 
 {
-    static Bathroom singleInstanceOfBathroom;
-    return singleInstanceOfBathroom;
+    static setTimer instance;
+    return instance;
 }
-// ---- Settings Class Functions ----
-void Settings::enter(House* house)
+void setTimer::enter(House* house) 
 {
-   Serial.println("entered Settings"); 
+    Serial.println("Entering setTimer"); 
 }
-
-void Settings::toggle(House* house, int whichbuttonpressed)
+void setTimer::toggle(House* house,ButtonSelect Select) 
+{ 
+    switch(Select)
+    {
+        case LBUTTON:
+            house->setState(livingRoom::getInstance());
+        case MBUTTON:
+            break;
+        case RBUTTON:
+            break;
+    }
+}
+void setTimer::exit(House* house) 
+{ 
+    Serial.println("Exiting setTimer"); 
+}
+//STUDYTIME
+houseState& studyTime::getInstance() 
 {
-       switch (whichbuttonpressed)
-   {
-   case LEFTBUTTON:
-        // invalid input
-    break;
-
-   case MIDDLEBUTTON:
-        house->setState(livingRoom::getInstance());
-    break;
-    case RIGHTBUTTON:
-        // invalid input
-    break;
-
-   default:
-    break;
-   }
+    static studyTime instance;
+    return instance;
 }
-
-void Settings::exit(House* house)
+void studyTime::enter(House* house) 
 {
-    Serial.println("leaving Settings");
+    Serial.println("Entering setTimer"); 
 }
-
-houseState& Settings::getInstance()
+void studyTime::toggle(House* house,ButtonSelect Select) 
+{ 
+    switch(Select)
+    {
+        case LBUTTON:
+            break;
+        case MBUTTON:
+            break;
+        case RBUTTON:
+            break;
+    }
+}
+void studyTime::exit(House* house) 
+{ 
+    Serial.println("Exiting setTimer"); 
+}
+//BREAKTIME
+houseState& breakTime::getInstance() 
 {
-    static Settings singleInstanceOfSettings;
-    return singleInstanceOfSettings;
+    static breakTime instance;
+    return instance;
 }
-// ---- setTimer Class Functions ----
-void setTimer::enter(House* house)
+void breakTime::enter(House* house) 
 {
-   Serial.println("entered setTimer"); 
+    Serial.println("Entering setTimer"); 
 }
-
-void setTimer::toggle(House* house, int whichbuttonpressed)
-{
-       switch (whichbuttonpressed)
-   {
-   case LEFTBUTTON:
-        house->setState(livingRoom::getInstance());
-    break;
-
-   case MIDDLEBUTTON:
-        // Invalid input 
-    break;
-    case RIGHTBUTTON:
-        house->setState(livingRoom::getInstance());
-    break;
-
-   default:
-    break;
-   }
+void breakTime::toggle(House* house,ButtonSelect Select) 
+{ 
+    switch(Select)
+    {
+        case LBUTTON:
+            break;
+        case MBUTTON:
+            break;
+        case RBUTTON:
+            break;
+    }
 }
-
-void setTimer::exit(House* house)
-{
-    Serial.println("leaving setTimer");
+void breakTime::exit(House* house) 
+{ 
+    Serial.println("Exiting setTimer"); 
 }
-
-houseState& setTimer::getInstance()
-{
-    static setTimer singleInstanceOfsetTimer;
-    return singleInstanceOfsetTimer;
-}
-
-// ---- studyTime Class Functions ----
-
-// ---- breakTime Class Functions ----

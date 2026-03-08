@@ -1,8 +1,10 @@
 #include <Arduino.h>
 #include "config.h"
 #include "Button.h"
-#include "house.h"
-#include "rotaryEncoder.h"
+#include "concreteStates.h"
+#include "houseState.h"
+#include "House.h"
+//#include "rotaryEncoder.h"
 //#include "tft_test.h"// uncomment if testing tft screen
 
 
@@ -21,31 +23,11 @@ void checkpos()
 {
     encoder->ISR_CheckAndUpdatePositon();
 }
-void leftchangestate()
-{
-    leftButton.debounce();
-    if(leftButton.isPressed())
-    {
-        squattrHouse.Toggle(LEFTBUTTON);
-    }
-}
-void middlechangestate()
-{
-    middleButton.debounce();
-    if(middleButton.isPressed())
-    {
-        squattrHouse.Toggle(MIDDLEBUTTON);
-    }
-}
-void rightchangestate()
-{
-    rightButton.debounce();
-    if(rightButton.isPressed())
-    {
-        squattrHouse.Toggle(RIGHTBUTTON);
-    }
-}
 */
+Button leftButton(LEFTBUTTON);
+Button middleButton(MIDDLEBUTTON);
+Button rightButton(RIGHTBUTTON);
+House myHouse;
 
 void setup()
 {
@@ -68,29 +50,34 @@ void setup()
     Serial.println("== Interupts Attached ==");
     delay(1000);
     Serial.println("== Setup Complete ==");
-   
+    leftButton.begin();
+    middleButton.begin();
+    rightButton.begin();
     
    
 }
 
-void loop()
-{  
-     middleButton.debounce();
-    if(middleButton.isPressed())
-    {
-        squattrHouse.Toggle(MIDDLEBUTTON);
-    }
+void loop() {
     leftButton.debounce();
-    if(leftButton.isPressed())
-    {
-        squattrHouse.Toggle(LEFTBUTTON);
-    }
-   
+    middleButton.debounce();
     rightButton.debounce();
-    if(rightButton.isPressed())
+
+    if(leftButton.isPressed()) 
     {
-        squattrHouse.Toggle(RIGHTBUTTON);
+        myHouse.Toggle(LBUTTON);
     }
 
-    delay(100);
+        // MIDDLE BUTTON
+    if (middleButton.isPressed()) 
+    {
+        myHouse.Toggle(MBUTTON);
+    }
+
+    // RIGHT BUTTON
+    if (rightButton.isPressed()) 
+    {
+        myHouse.Toggle(RBUTTON);
+    }
+
+    delay(10);
 }
