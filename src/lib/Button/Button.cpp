@@ -29,6 +29,7 @@ bool Button::isPressed()
 {
   if (stable == LOW && lastStable == HIGH) 
   {
+    startTime = millis();
     lastStable = stable;
     return true;
   }
@@ -38,21 +39,24 @@ bool Button::isPressed()
 
 bool Button::isReleased() 
 {
-  if (stable == HIGH && lastStable == LOW) 
+  static bool low = false;
+  if(stable == LOW)
   {
-    lastStable = stable;
-    return true;
+    low = true;
+    return false;
   }
-  lastStable = stable;
+  if(stable == HIGH && low)
+  {
+    low = false;
+    hold = millis() - startTime;
+    return true;  
+  }
   return false;
 }
 
+//Quick not on this function please call the .ispressed & .isreleased function even if your not using it before calling this function
 unsigned long Button::holdTime()
 {
-  if(stable == LOW)
-  {
-    return millis() - startTime;
-  }
-  return 0;
+  return hold / 1000;
 }
 

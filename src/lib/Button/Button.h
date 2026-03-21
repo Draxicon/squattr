@@ -12,6 +12,7 @@ class Button
         unsigned long debounceTime = 0;
         const unsigned long debounceDelay = 25;
         unsigned long startTime = 0;
+        unsigned long hold = 0;
         bool lastStable = HIGH;
     public:
         Button(int p);
